@@ -1,5 +1,5 @@
 !
-version 12.2
+version 12.4
 no service timestamps log datetime msec
 no service timestamps debug datetime msec
 no service password-encryption
@@ -27,6 +27,7 @@ no ipv6 cef
 !
 !
 !
+spanning-tree mode pvst
 !
 !
 !
@@ -38,25 +39,13 @@ interface FastEthernet0/0
  duplex auto
  speed auto
 !
-interface FastEthernet1/0
+interface FastEthernet0/1
  no ip address
  duplex auto
  speed auto
  shutdown
 !
-interface Serial2/0
- no ip address
- shutdown
-!
-interface Serial3/0
- no ip address
- shutdown
-!
-interface FastEthernet4/0
- no ip address
- shutdown
-!
-interface FastEthernet5/0
+interface Vlan1
  no ip address
  shutdown
 !
